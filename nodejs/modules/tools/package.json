@@ -1,0 +1,14 @@
+{
+  "name": "mydemo_test_modules",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "我的第一个包",
+  "keywords": [
+    "mydemo",
+    "dataFormat"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.17.3"
+  }
+}

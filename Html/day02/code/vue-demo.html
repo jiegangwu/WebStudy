@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 下面一行是页面描述信息 -->
+  <meta name="description" content="这里添加描述">
+  <script src="https://unpkg.com/vue@3"></script>
+  <title>vue-demo</title>
+</head>
+<body>
+<div id="app">{{message}}<br>
+  <button @click="count++">{{count}}</button>
+</div>
+</body>
+<script>
+  Vue.createApp({
+    data() {
+      return {
+        message: 'Hello World!!!',
+        count: 0
+      }
+    }
+  }).mount('#app')
+</script>
+</html>

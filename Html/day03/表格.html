@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 下面一行是页面描述信息 -->
+  <meta name="description" content="这里添加描述">
+  <title>支出单表格练习</title>
+  <style>
+    #app {
+      width: 100%;
+      background: turquoise;
+      margin: 0 20px;
+    }
+
+    table, td {
+      border: 1px solid rgb(190, 190, 190);
+      text-align: center;
+      width: 1500px;
+    }
+
+  </style>
+</head>
+<body>
+<div id="app">
+  <table>
+    <caption>支出证明单1</caption>
+    <thead>支出证明单</thead>
+    <tbody>
+    <tr>
+      <td style="width: 200px">区分</td>
+      <td style="width: 600px" colspan="13">
+        <label>
+          <input type="checkbox">
+          本部
+        </label>
+        <label>
+          <input type="checkbox">
+          TFT重庆
+        </label>
+        <label>
+          <input type="checkbox">
+          TFT河北
+        </label>
+      </td>
+      <td style="width: 200px">申请部门</td>
+    </tr>
+    <tr>
+      <td rowspan="2">编码</td>
+      <td rowspan="2">摘要</td>
+      <td colspan="11" style="width: 200px">金额</td>
+      <td>&nbsp;</td>
+      <td rowspan="3">管理部</td>
+
+    </tr>
+
+    <tr>
+      <td>亿</td>
+      <td>仟</td>
+      <td>佰</td>
+      <td>十</td>
+      <td>万</td>
+      <td>仟</td>
+      <td>佰</td>
+      <td>十</td>
+      <td>元</td>
+      <td>角</td>
+      <td>分</td>
+      <td>备注</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>测试支出单项目1xxxxxxxxxxxxxxxxxxx</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+      <td>10</td>
+      <td>11</td>
+      <td>12</td>
+      <td>13</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>测试支出单项目2xxxxxxxxxxxxxxxxxxx</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+      <td>10</td>
+      <td>11</td>
+      <td>12</td>
+      <td>13</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>测试支出单项目3xxxxxxxxxxxxxxxxxxx</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+      <td>10</td>
+      <td>11</td>
+      <td>12</td>
+      <td>13</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>测试支出单项目4xxxxxxxxxxxxxxxxxxx</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+      <td>10</td>
+      <td>11</td>
+      <td>12</td>
+      <td>13</td>
+      <td>14</td>
+    </tr>
+    </tbody>
+
+  </table>
+  <br>
+  <table>
+    <tbody>
+    <tr>
+      <td>DD</td>
+      <td>
+        <label>
+          <input type="checkbox">
+          现金
+        </label>
+        <label>
+          <input type="checkbox">
+          电汇
+        </label>
+        <label>
+          <input type="checkbox">
+          现金支票
+        </label>
+        <label>
+          <input type="checkbox">
+          转账支票
+        </label>
+        <label>
+          <input type="checkbox">
+          银行划款
+        </label>
+      </td>
+      <td>预算方式</td>
+      <td>
+        <label>
+          <input type="checkbox" checked>
+          预算内
+        </label>
+        <label>
+          <input type="checkbox">
+          预算外
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="5">说明</td>
+      <td colspan="3">DD</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

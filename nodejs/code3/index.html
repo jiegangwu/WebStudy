@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 下面一行是页面描述信息 -->
+  <meta name="description" content="这里添加描述">
+  <title>demo</title>
+  <script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<button id="btnGet">GET</button>
+<button id="btnPost">POST</button>
+<button id="btnDelete">Del</button>
+<button id="btnJSONP">JSONP</button>
+</body>
+<script>
+  $(function () {
+    // 1.测试GET 接口
+    $('#btnGet').on('click', function () {
+      $.ajax({
+        type: 'GET',
+        url: 'http://127.0.0.1:8088/api/get',
+        data: {name: 'admin1', age: 20},
+        success: function (res) {
+          console.log(res)
+        },
+      })
+    })
+
+    // 2.测试POST 接口
+    $('#btnPost').on('click', function () {
+      $.ajax({
+        type: 'POST',
+        url: 'http://127.0.0.1:8088/api/post',
+        data: {name: 'admin2', age: 18},
+        success: function (res) {
+          console.log(res)
+        },
+      })
+    })
+    $('#btnDelete').on('click', function () {
+      $.ajax({
+        type: 'DELETE',
+        url: 'http://127.0.0.1:8088/api/delete',
+        success: function (res) {
+          console.log(res)
+        },
+      })
+    })
+
+    $('#btnJSONP').on('click', function () {
+      $.ajax({
+        type: 'GET',
+        url: 'http://127.0.0.1:8088/api/jsonp',
+        dataType: 'jsonp',
+        success: function (res) {
+          console.log(res)
+        },
+      })
+    })
+  })
+</script>
+</html>

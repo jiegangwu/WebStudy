@@ -49,5 +49,37 @@ exports.addArticleCates = (req, res) => {
 
 
     // TODO：新增文章分类
+    // 定义文章分类的语句
+    const sql = 'insert into ev_article_cate set ?';
+    db.query(sql, req.body, (req, results) => {
+        // SQL 语句执行失败
+        if (err) return res.cc(err)
+
+        // SQL 语句执行成功，但是影响行数不等于 1
+        if (results.affectedRows !== 1) return res.cc('新增文章分类失败！')
+
+        // 新增文章分类成功
+        res.cc('新增文章分类成功！', 0)
+      }
+    )
+
+
   })
+}
+
+exports.deleteCateById = (req, res) => {
+  const sql = 'update ev_article_cate set is_delete=1 where id=?'
+
+  db.query(sql, [req.body.id], (err, results) => {
+      if (err) {
+        return res.cc(err)
+      }
+      if (results.affectedRows !== 1) {
+        return res.cc('删除文章分类失败')
+      }
+      // 删除文章分类成功
+      res.cc('删除文章分类成功！', 0)
+    }
+  )
+
 }

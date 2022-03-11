@@ -16,7 +16,15 @@ exports.add_cate_schema = {
 
 // 校验规则对象 - 删除分类
 exports.delete_cate_schema = {
-  body: {
+  params: {
     id,
   },
 };
+
+// 校验规则对象 - 根据 Id 获取分类
+exports.get_cate_schema = {
+  params: {
+    id,
+  },
+};
+

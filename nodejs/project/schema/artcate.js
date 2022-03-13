@@ -4,7 +4,7 @@ const joi = require('joi');
 const name = joi.string().required();
 const alias = joi.string().alphanum().required();
 // 定义 分类Id 的校验规则
-const id = joi.number().integer().min(1).required()
+const id = joi.number().integer().min(1).required();
 
 // 向外共享验证规则
 exports.add_cate_schema = {
@@ -35,4 +35,4 @@ exports.update_cate_schema = {
     name,
     alias,
   },
-}
+};

@@ -6,6 +6,8 @@ const expressJWT = require('express-jwt');
 const config = require('./config');
 const userinfoRouter = require('./router/userinfo');
 const artCateRouter = require('./router/artcate');
+// 导入并使用文章路由模块
+const articleRouter = require('./router/article');
 
 const app = express();
 const port = 8088;
@@ -35,8 +37,11 @@ app.use('/api', userRouter);
 // 查询用户信息路由
 app.use('/my', userinfoRouter);
 // 文章分类路由模块
-app.use('/my/article', artCateRouter);
-
+app.use('/my/artcle', artCateRouter);
+// 为文章的路由挂载统一的访问前缀 /my/article
+app.use('/my/article', articleRouter);
+// 托管静态资源文件
+app.use('/uploads', express.static('./uploads'))
 
 // 定义错误级别的中间件
 app.use((err, req, res, next) => {

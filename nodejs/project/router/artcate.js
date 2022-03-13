@@ -3,9 +3,22 @@
 const express = require('express');
 const artcate_handle = require('../router_handler/artcate');
 const expressJoi = require('@escook/express-joi');
-const {add_cate_schema, delete_cate_schema, get_cate_schema, update_cate_schema} = require("../schema/artcate");
+const {
+  add_cate_schema,
+  delete_cate_schema,
+  get_cate_schema,
+  update_cate_schema,
+  add_article_schema
+} = require("../schema/artcate");
+const multer = require('multer');
+const path = require('path');
+
 
 const router = express.Router();
+
+// 创建 multer 的实例对象，通过 dest 属性指定文件的存放路径
+const upload = multer({dest: path.join(__dirname, '../uploads')});
+
 
 // 获取文章分类列表数据
 router.get('/cates', artcate_handle.getArtCates);

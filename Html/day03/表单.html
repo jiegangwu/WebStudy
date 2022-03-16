@@ -2,13 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <!-- 下面一行是页面描述信息 -->
-  <meta name="description" content="这里添加描述">
+  <meta content="这里添加描述" name="description">
   <title>表单</title>
 </head>
 <body>
+<form action="">
+  文本框：<input placeholder="用户名" type="text">   <!--文本框，输入单行文本--> <br><br>
 
+  密码框：<input type="password"> <!-- 密码框--><br><br>
+
+  <label>
+    单选框:
+    <input checked name="sex" type="radio">
+    男 <!-- 单选框--></label>
+  <label>
+
+    <input name="sex" type="radio">
+    女 <!-- 单选框--> </label><br><br>
+
+  多选框：<input checked name="hobby" type="checkbox"> 看书 <!--多选框-->
+  <input name="hobby" type="checkbox"> 看电视 <!--多选框-->
+  <input name="hobby" type="checkbox"> 玩游戏 <!--多选框--><br><br>
+
+  文件选择：<input type="file"> <!--文件选择--><br><br>
+  多文件选择：<input multiple type="file"> <!--文件选择--><br><br>
+
+  提交框：<input type="submit"> <!--提交框--><br><br>
+
+  重置按钮：<input type="reset">  <!-- 重置按钮--><br><br>
+
+  普通按钮：<input type="button" value="免费注册"> <!--普通按钮--><br><br>
+
+</form>
+
+<button type="button">按钮</button>
+<button type="submit">提交</button>
+<button type="reset">重置</button>
+
+
+<label for="1"></label><select id="1" name="city">
+  <option value="河北">河北</option>
+  <option value="上海" selected>上海</option>
+  <option value="深圳">深圳</option>
+</select>
+
+<textarea></textarea>
 </body>
 </html>

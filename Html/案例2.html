@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 下面一行是页面描述信息 -->
+  <meta name="description" content="这里添加描述">
+  <title>Title</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .main {
+      margin: 200px auto;
+      width: 1226px;
+      height: 614px;
+      /*background-color: yellowgreen;*/
+    }
+
+    .art {
+      float: left;
+      margin-right: 14px;
+      width: 234px;
+      height: 614px;
+      background-color: #800080;
+    }
+
+    .list {
+      float: left;
+      width: 978px;
+      height: 614px;
+      background-color: violet;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      float: left;
+      display: inline-block;
+      width: 234px;
+      height: 300px;
+      background-color: #87ceeb;
+      margin-right: 14px;
+    }
+
+    li:nth-child(-n+4) {
+      margin-bottom: 14px;
+    }
+
+    li:nth-child(4n) {
+      margin-right: 0;
+    }
+
+  </style>
+</head>
+<body>
+<div class="main">
+  <div class="art"></div>
+  <div class="list">
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+    </ul>
+  </div>
+</div>
+</body>
+<script></script>
+</html>

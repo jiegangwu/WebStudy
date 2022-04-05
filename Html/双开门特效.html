@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 下面一行是页面描述信息 -->
+  <meta name="description" content="这里添加描述">
+  <title>双开门特效</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      width: 1366px;
+      height: 600px;
+      margin: 100px auto;
+      background-image: url(./images/bg.jpg);
+      overflow: hidden;
+    }
+
+    .box:hover .left {
+      transform: translateX(-100%);
+    }
+
+    .box:hover .right {
+      transform: translateX(100%);
+    }
+
+    .box .left {
+      float: left;
+      width: 50%;
+      height: 600px;
+      background-image: url(./images/fm.jpg);
+      transition: all .5s;
+    }
+
+    .box .right {
+      float: left;
+      width: 50%;
+      height: 600px;
+      background-image: url(./images/fm.jpg);
+      background-position: -650px 0;
+      transition: all .5s;
+    }
+
+    /*  伪元素方法*/
+    .box1 {
+      width: 1366px;
+      height: 600px;
+      margin: 100px auto;
+      background-image: url(./images/bg.jpg);
+      overflow: hidden;
+    }
+
+    .box1::before {
+      float: left;
+      content: '';
+      width: 50%;
+      height: 600px;
+      background-image: url(./images/fm.jpg);
+      transition: all .5s;
+    }
+
+    .box1::after {
+      float: right;
+      content: '';
+      width: 50%;
+      height: 600px;
+      background-image: url(./images/fm.jpg);
+      background-position: -650px 0;
+      transition: all .5s;
+    }
+
+    .box1:hover::before {
+      transform: translateX(-100%);
+    }
+
+    .box1:hover::after {
+      transform: translateX(100%);
+    }
+
+
+    .box3 {
+      position: relative;
+      width: 1366px;
+      height: 600px;
+      /*border: 1px solid #000000;*/
+      margin: 20px auto;
+      overflow: hidden;
+    }
+
+    .center {
+      width: 1366px;
+      height: 600px;
+      background-image: url(./images/bg.jpg);
+
+    }
+
+    .box3 .left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 683px;
+      height: 600px;
+      background-image: url(./images/fm.jpg);
+      transition: all .5s;
+    }
+
+    .box3 .right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 683px;
+      height: 600px;
+      background-image: url(./images/fm.jpg);
+      background-position: -650px 0;
+      transition: all .5s;
+    }
+
+    .box3:hover .left {
+      transform: translateX(-100%);
+    }
+
+    .box3:hover .right {
+      transform: translateX(100%);
+    }
+
+  </style>
+</head>
+<body>
+<!--父子元素方法-->
+<div class="box">
+  <div class="left"></div>
+  <div class="right"></div>
+</div>
+
+<!-- 伪元素方法-->
+
+<div class="box1"></div>
+
+<!-- 兄弟元素方法-->
+<!--为了定位第三种方案-->
+<div class="box3">
+  <div class="left"></div>
+  <div class="center"></div>
+  <div class="right"></div>
+</div>
+</body>
+<script></script>
+</html>

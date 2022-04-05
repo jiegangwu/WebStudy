@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 下面一行是页面描述信息 -->
+  <meta name="description" content="这里添加描述">
+  <title>透视效果</title>
+  <style>
+    body {
+      /*需要给需要透视元素的父级添加*/
+      perspective: 1000px;
+    }
+
+    .box {
+      margin: 100px auto;
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      transition: all .5s;
+    }
+
+    .box:hover {
+      transform: translateZ(200px);
+    }
+  </style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+<script></script>
+</html>

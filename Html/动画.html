@@ -6,11 +6,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- 下面一行是页面描述信息 -->
   <meta name="description" content="这里添加描述">
-  <title>$Title$</title>
-  <style></style>
+  <title>动画</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 100px;
+      background-color: pink;
+      animation: change1 1s;
+    }
+
+    @keyframes change {
+      from {
+        width: 200px;
+      }
+      to {
+        width: 600px;
+      }
+    }
+
+    @keyframes change1 {
+      0% {
+        width: 200px;
+      }
+      50% {
+        width: 500px;
+        height: 300px;
+      }
+      100% {
+        width: 800px;
+        height: 500px;
+      }
+    }
+  </style>
 </head>
 <body>
-$END$
+<div class="box"></div>
 </body>
 <script></script>
 </html>

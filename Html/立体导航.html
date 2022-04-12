@@ -6,11 +6,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- 下面一行是页面描述信息 -->
   <meta name="description" content="这里添加描述">
-  <title>$Title$</title>
-  <style></style>
+  <title>立体导航</title>
+  <style>
+    ul {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      list-style: none;
+    }
+
+    a {
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 100%;
+      text-decoration: none;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    li {
+      position: relative;
+      float: left;
+      width: 100px;
+      height: 40px;
+      line-height: 40px;
+
+      transform-style: preserve-3d;
+      transition: all 0.5s;
+      /* 为了看到盒子的立体状态，临时添加*/
+      /*transform: rotateX(-30deg) rotateY(30deg);*/
+    }
+
+    .nav {
+      width: 300px;
+      height: 40px;
+      margin: 100px auto;
+    }
+
+    .front {
+      background-color: green;
+      transform: translateZ(20px);
+      transition: all 3s;
+    }
+
+    .back {
+      background-color: orange;
+      transform: rotatex(90deg) translateZ(20px);
+    }
+
+    /*li:hover 立方体旋转*/
+    li:hover {
+      transform: rotateX(-90deg);
+    }
+
+  </style>
 </head>
 <body>
-$END$
+<div class="nav">
+  <ul>
+    <li>
+      <a href="#" class="front">首页</a>
+      <a href="#" class="back">index</a>
+    </li>
+    <li>
+      <a href="#" class="front">新闻</a>
+      <a href="#" class="back">news</a>
+    </li>
+    <li>
+      <a href="#" class="front">关于</a>
+      <a href="#" class="back">about</a>
+    </li>
+  </ul>
+</div>
+
+
 </body>
 <script></script>
 </html>

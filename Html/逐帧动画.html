@@ -6,11 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- 下面一行是页面描述信息 -->
   <meta name="description" content="这里添加描述">
-  <title>$Title$</title>
-  <style></style>
+  <title>逐帧动画</title>
+  <style>
+    .box {
+      width: 140px;
+      height: 140px;
+      /*border: 1px solid #000000;*/
+      background-image: url(./images/bg.png);
+      /*12 精灵图小图的个数*/
+      animation: move 1s steps(12) infinite, run 10s forwards;
+    }
+
+    @keyframes move {
+      from {
+        background-position: 0 0;
+      }
+      to {
+        /* 1680 是整个精灵图的宽度*/
+        background-position: -1680px 0;
+      }
+    }
+
+    @keyframes run {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(800px);
+      }
+    }
+  </style>
 </head>
 <body>
-$END$
+<div class="box"></div>
 </body>
 <script></script>
 </html>

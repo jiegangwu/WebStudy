@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background: url(../images/f1_1.jpg) no-repeat center 0;
+    /*  缩放背景图
+    contain 图片等比例缩放，当图片的宽度或者高度和盒子高度相等的时候，图片不再缩放
+    cover 图片完全覆盖整个盒子，可能会导致图片显示不全
+    */
+    /*background-size: contain;*/
+    background-size: cover;
+}
+
+/* 定位网页中元素的位置
+引入各种图片
+定位图片位置
+定义动画
+使用动画
+*/
+.cloud img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+
+.cloud img:nth-child(1) {
+    margin-left: -300px;
+    top: 20px;
+    animation: cloud 2s infinite alternate;
+}
+
+.cloud img:nth-child(2) {
+    margin-left: 400px;
+    top: 100px;
+    animation: cloud 2s infinite alternate 0.2s;
+}
+
+.cloud img:nth-child(3) {
+    margin-left: -550px;
+    top: 200px;
+    animation: cloud 3s infinite alternate 0.4s;
+}
+
+@keyframes cloud {
+    to {
+        transform: translateX(30px);
+    }
+}
+
+.center {
+    position: absolute;
+    /*width: 100%;*/
+    /*height: 100%;*/
+    left: 50%;
+    top: 50%;
+    /*margin: 0 auto;*/
+    transform: translate(-50%, -50%);
+}
+
+.center .lu {
+    height: 300px;
+    position: absolute;
+    top: -280px;
+    left: 480px;
+    scale: 1.5;
+}
+
+.center .san {
+    /*height: 300px;*/
+    position: absolute;
+    top: -230px;
+    left: -170px;
+    /*scale: 1.5;*/
+    animation: yudi 3s infinite alternate 0.4s
+}
+
+.foot ul {
+
+    position: absolute;
+    left: 250px;
+    bottom: 65px;
+    margin: 0 auto;
+}
+
+.foot ul li {
+    list-style: none;
+    float: left;
+    margin-left: 300px;
+}
+
+@keyframes yudi {
+    to {
+        transform: translatey(-30px);
+    }
+}
+
+.foot ul li:nth-child(1) {
+    animation: yudi 3s infinite alternate 0.1s
+}
+
+.foot ul li:nth-child(2) {
+    animation: yudi 3s infinite alternate 0.5s
+}
+
+.foot ul li:nth-child(3) {
+    animation: yudi 3s infinite alternate 0.2s
+}
+
+.foot ul li:nth-child(4) {
+    animation: yudi 3s infinite alternate 0.4s
+}

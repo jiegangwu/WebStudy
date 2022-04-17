@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <!-- 下面一行是页面描述信息 -->
+  <meta name='description' content='这里添加描述'>
+  <title>flex-demo1</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      display: flex;
+      /*justify-content: space-between;*/
+      /*height: 200px;*/
+
+      height: 300px;
+      margin: auto;
+
+
+      border: 1px solid #000000;
+    }
+
+    .box div {
+      /*float: left;*/
+      /*margin: 10px;*/
+      /*width: 100px;*/
+      height: 200px;
+      margin: 0 20px;
+      background-color: pink;
+    }
+
+    .box div:nth-child(1) {
+      width: 50px;
+    }
+
+    .box div:nth-child(2) {
+      /* 占用父级剩余尺寸的分数 */
+      flex: 3;
+    }
+
+    .box div:nth-child(3) {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+<div class='box'>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+</body>
+<script></script>
+</html>
